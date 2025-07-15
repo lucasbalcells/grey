@@ -1,0 +1,713 @@
+@font-face {
+  font-family: 'FranklinGothic-Book';
+  src: url('../assets/fonts/FranklinGothic-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FranklinGothic-Medium';
+  src: url('../assets/fonts/FranklinGothic-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'franklin-gothic-condensed';
+  src: url('../assets/fonts/franklin-gothic-condensed.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GaramondSwash';
+  src: url('../assets/fonts/GaramondMTSwashCaps.ttf') format('truetype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  font-family: 'FranklinGothic-Book', sans-serif;
+  transition: background-color 0.8s ease;
+}
+
+body.force-scroll {
+  overflow-y: scroll !important;
+}
+
+body.white {
+  background-color: rgb(243, 243, 243);
+  color: black;
+}
+
+body.black {
+  background-color: rgb(17, 17, 17);
+  color: white;
+}
+
+.header {
+  position: fixed;
+  top: 45px;
+  width: 100%;
+  text-align: center;
+  align-content: justify;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.no-sticky-header .header {
+  position: static; /* o relative si preferís */
+  margin-top: 45px;
+  align-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.logo-subtext {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  margin-top: 2px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 80px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(143, 143, 143);
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  pointer-events: none;
+  gap: 15px;
+  padding-top: 180px;
+  box-sizing: border-box;
+}
+
+.slide-image {
+  display: block;
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto 0;
+  border-radius: 8px;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.section-link {
+  display: inline-block;
+  font-size: 70px;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-weight: bold;
+}
+
+.subheading {
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-size: 30px;
+  color: #d80000;
+  margin: 0;
+}
+
+.claim {
+  font-family: 'FranklinGothic-Medium', serif;
+  font-size: 13px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: bold;
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'FranklinGothic-Book', sans-serif;
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 20;
+}
+
+.scroll-indicator .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #999;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-indicator .dot.active {
+  background-color: #d80000;
+}
+
+.capabilities-section {
+  padding: 500px 40px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.capabilities-intro h1 {
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.capabilities-intro p {
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.capability-item {
+  background-color: transparent;
+  padding: 20px;
+  border-top: 2px solid #d80000;
+  text-align: left;
+}
+
+.capability-item h2 {
+  font-family: 'FranklinGothic-Medium', sans-serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.capability-item p {
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.capabilities-image {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.capabilities-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones para fade + movimiento */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.fade-out-up {
+  animation: fadeOutUp 0.8s ease forwards;
+}
+
+.fade-out-down {
+  animation: fadeOutDown 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+.slide.hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.animated-element {
+  opacity: 0;
+  transform: translateY(30px); /* o -30px, según tu dirección default */
+  animation-fill-mode: both;
+}
+
+.work-grid {
+  display: flex;
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: center;         /* Centra verticalmente */
+  gap: 60px;
+  width: 100vw;
+  height: 100vh;               /* Toda la pantalla */
+  box-sizing: border-box;
+  padding-top: 100px;          /* Compensa el header si es fijo */
+  background-color: rgb(243, 243, 243);
+}
+
+.work-block {
+  width: 420px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(17, 17, 17);
+}
+
+.work-block img {
+  width: 420px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.work-block .section-link {
+  font-size: 36px;
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-weight: bold;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.strike {
+  text-decoration: line-through;
+  margin-right: 4px;
+  color: #666;
+}
+
+.work-block:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.50);
+}
+
+.work-block:hover .section-link {
+  transform: translateY(-3px);
+  color: #111;
+}
+
+/* 360 */
+.ideas-section {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 160px 60px 80px;
+  background-color: white;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.idea-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.idea-card.center {
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.idea-card.left {
+  flex-direction: row;
+  text-align: left;
+}
+
+.idea-card.right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.idea-card img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.idea-text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.idea-text h2 {
+  font-family: 'FranklinGothic-Medium', sans-serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+.idea-text h3 {
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-size: 18px;
+  color: #d80000;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.idea-text p {
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+/* LILIANA */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #FF2400;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.white-bg {
+  background-color: #FF2400;
+}
+
+.boutique-wrapper {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  z-index: 2;
+  top: 85%;
+  left: 50%;
+}
+
+.boutique-box {
+  background-color: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.boutique-line {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: normal;
+}
+
+.boutique-bold {
+  font-weight: bold;
+  color: #FF2400;
+}
+
+.arrow-corner {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  transform: rotate(45deg);
+}
+
+.floating-cards .card-layer {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.floating-cards .layer-2 {
+  top: 40px;
+  left: 40px;
+  opacity: 0.7;
+}
+
+.animated-element {
+  opacity: 1 !important;
+}
+
+.cover-slide {
+  background-color: #FF2400;
+  position: relative;
+  height: 100vh;
+  overflow: visible;
+}
+
+.cover-logo-grey {
+  position: absolute;
+  top: -145px;   /* Ajustá este valor para mover verticalmente */
+  left: 50%;  /* Ajustá este valor para mover horizontalmente */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.cover-logo-grey img {
+  height: 130px;  /* Podés agrandar o achicar el logo acá */
+  object-fit: contain;
+}
+
+.absolute-logo {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+
+.absolute-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.absolute-date {
+  position: absolute;
+  top: 22%;
+  left: center;
+  font-size: 1.2rem;
+  color: black;
+  z-index: 2;
+  font-family: 'franklin-gothic-condensed', sans-serif;
+}
+
+.no-slide-animation .slide {
+  position: static;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  visibility: visible !important;
+}
+
+.no-scroll-lock .container {
+  height: auto !important;
+}
+
+.absolute-headline {
+  position: absolute;
+  top: 43%;   /* modificá según necesidad */
+  left: 45%;  /* modificá según necesidad */
+  font-family: 'franklin-gothic-condensed', 'Franklin Gothic', sans-serif;
+  font-size: 35px;
+  color: white;
+  z-index: 2;
+}
+
+.cover-center {
+  position: absolute;
+  top: 32%;
+  left: center;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.cover-headline {
+  font-family: 'franklin-gothic-condensed', 'Franklin Gothic', sans-serif;
+  font-size: 315px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 147, 147);
+  position: absolute; /* <-- Esta línea es clave */
+  z-index: 1; /* Opcional, por si necesitás que quede por delante o detrás de algo */
+}
+
+
+.slide-liliana {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  pointer-events: none;
+  gap: 15px;
+  padding-top: 500px;
+  box-sizing: border-box;
+}
+
+.boutique-image {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  z-index: 2;
+  top: 0%;
+  left: -100%;
+  display: block;
+  height: auto;
+  margin: 10px auto 0;
+}
+
+.boutique-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* APLICADO AQUÍ */
+  display: block;
+}
+
+.valores-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.valores-titulo {
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 36px;
+  color: black;
+  margin: 0;
+}
+
+.valores-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  font-family: 'FranklinGothic-Medium', sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 1;
+}
+
+.valor.palabra {
+  color: white;
+}
+
+.valor.simbolo {
+  color: white;
+  font-size: 40px;
+  align-self: center;
+  opacity: 0.6;
+}
+
+.section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 60px;
+  box-sizing: border-box;
+}

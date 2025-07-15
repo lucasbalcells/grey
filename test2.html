@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grey Argentina</title>
+    <link rel="stylesheet" href="css/style-test2.css" />
+</head>
+
+<body class="white">
+
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logos/us/Logo-GREY-Red.png" alt="Grey Logo" />
+    </div>
+    <nav class="nav">
+      <a href="trabajos.html">Our Work</a>
+      <a href="nosotros.html">Us</a>
+      <a href="servicios.html">Services</a>
+      <a href="contacto.html">Work with us</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="slide active" data-bg="white">
+      <a href="trabajos.html" class="section-link">Our Work</a>
+      <div class="subheading">CAMPAIGNS & CASES</div>
+      <div class="claim">EXPERIENCE THE POWER OF IDEAS</div>
+    </div>
+    <div class="slide" data-bg="black">
+      <a href="nosotros.html" class="section-link">Us</a>
+      <div class="subheading">MEET THE TEAM</div>
+      <div class="claim">THE PEOPLE BEHIND THE WORK</div>
+    </div>
+    <div class="slide" data-bg="black">
+      <a href="servicios.html" class="section-link">Services</a>
+      <div class="subheading">WHAT WE DO</div>
+      <div class="claim">CREATIVE BUSINESS SOLUTIONS</div>
+    </div>
+    <div class="slide" data-bg="black">
+      <a href="contacto.html" class="section-link">Work with us</a>
+      <div class="subheading">JOIN OUR TEAM</div>
+      <div class="claim">LET'S BUILD SOMETHING TOGETHER</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© Grey Argentina</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+    let isScrolling = false;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+
+      const bg = slides[index].dataset.bg;
+      document.body.className = bg;
+    }
+
+    function scrollSlides(event) {
+      if (isScrolling) return;
+      isScrolling = true;
+
+      if (event.deltaY > 0) {
+        currentIndex = Math.min(currentIndex + 1, slides.length - 1);
+      } else {
+        currentIndex = Math.max(currentIndex - 1, 0);
+      }
+
+      showSlide(currentIndex);
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 1000);
+    }
+
+    window.addEventListener('wheel', scrollSlides, { passive: false });
+  </script>
+</body>
+</html>

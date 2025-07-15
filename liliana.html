@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header test</title>
+  <link rel="stylesheet" href="css/style-credenciales.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const dateEl = document.getElementById("current-date");
+      const meses = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
+      const today = new Date();
+      const mes = meses[today.getMonth()];
+      const anio = today.getFullYear();
+      dateEl.textContent = `${mes} / ${anio}`;
+    });
+  </script>
+</head>
+
+<body>
+  <div class="background-red-fullscreen"></div>
+
+  <div class="block header">
+    <div class="logo-cliente">
+      <img src="assets/logos/clientes/liliana.png" alt="Logo Cliente" />
+    </div>
+    <div class="logo-us">
+      <img src="assets/logos/us/Logo-GREY-White.png" alt="Logo Grey" />
+    </div>
+    <div class="fecha" id="current-date"></div>
+  </div>
+
+  <!-- Billboard -->
+  <div class="block billboard">
+    <div class="billboard-wrapper">
+      <h1 class="billboard-text">CREDENCIALES</h1>
+    </div>
+  </div>
+
+<!-- BLOQUE NO INVERTIDO -->
+<div class="block split">
+  <div class="split-content">
+    
+    <!-- Imagen izquierda -->
+    <div class="split-item">
+      <div class="split-image-container">
+        <img src="assets/images/liliana/earth.webp" alt="Imagen" class="rounded-image" />
+      </div>
+    </div>
+
+    <!-- Contenedor de texto con líneas detrás -->
+    <div class="split-item">
+      <div class="split-text-wrapper">
+        <div class="floating-lines">
+          <div class="line layer-1"></div>
+          <div class="line layer-2"></div>
+        </div>
+
+        <div class="text-box">
+          <h2>
+            <span class="highlight">Somos la</span><br>
+            <span class="highlight">boutique</span><br>
+            con alcance global<br>
+            <span class="highlight">de WPP</span>
+          </h2>
+          <div class="arrow">↓</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BLOQUE INVERTIDO -->
+<div class="block split-inverted">
+  <div class="split-content inverted">
+    
+    <!-- TEXTO A LA IZQUIERDA -->
+    <div class="split-text-wrapper">
+      <div class="floating-lines">
+        <div class="line layer-1"></div>
+        <div class="line layer-2"></div>
+      </div>
+      <div class="text-box">
+        <h2>
+          <span class="highlight">Talento</span><br />
+          Experimentado<br />
+          <span class="highlight">y Dedicado</span>
+        </h2>
+        <div class="arrow">↓</div>
+      </div>
+    </div>
+
+    <!-- IMAGEN A LA DERECHA EN WRAPPER -->
+    <div class="split-image-wrapper">
+      <div class="split-image-container-inverted">
+        <img src="assets/images/liliana/foto-agencia.jpg" alt="Imagen ilustrativa" />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div class="block valores">
+    <div class="valores-wrapper">
+      <h2 class="valores-title">Valores que crean valor</h2>
+      <div class="valores-keywords">
+        <span class="valor">creatividad</span>
+        <span class="plus">+</span>
+        <span class="valor">empatía</span>
+        <br />
+        <span class="plus">+</span>
+        <span class="valor">unidad</span>
+        <span class="plus">+</span>
+        <span class="valor">servicio</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="block valoracion">
+    <h2 class="valoracion-title">¿Cómo nos valoran los clientes hoy?</h2>
+    <div class="valoracion-cards">
+      <div class="valoracion-card">
+        <div class="flecha">↙</div>
+        <p class="label">Nos<br>recomendaría a<br><span>otros clientes</span></p>
+        <p class="score">8.78</p>
+      </div>
+      <div class="valoracion-card">
+        <div class="flecha">↘</div>
+        <p class="label">Performance final</p>
+        <p class="score">8.22</p>
+      </div>
+    </div>
+    <div class="valoracion-sub">Vantage Score</div>
+  </div>
+  <div class="block leadership">
+  <h2 class="leadership-title">Leadership team</h2>
+  <div class="team-grid">
+
+    <!-- Miembro -->
+      <div class="member">
+        <img src="assets/images/leadership/diego.jpg" alt="Diego Medvedocky" />
+        <h3>Diego Medvedocky</h3>
+        <p>Global Creative Partner<br>President Grey LATAM & Argentina</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/marco.png" alt="Marco Milesi" />
+        <h3>Marco Milesi</h3>
+        <p>Chief Executive Officer</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/carolina.png" alt="Carolina Bruzzone" />
+        <h3>Carolina Bruzzone</h3>
+        <p>Chief Strategy & Operations Officer</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/julieta.png" alt="Julieta Margulis" />
+        <h3>Julieta Margulis</h3>
+        <p>Head of Business & Growth</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/jordana.png" alt="Jordana Sitt" />
+        <h3>Jordana Sitt</h3>
+        <p>Head of International Business</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/mariano.png" alt="Mariano Favetto" />
+        <h3>Mariano Favetto</h3>
+        <p>Executive Creative Director</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/joaquin.png" alt="Joaquín Ares" />
+        <h3>Joaquín Ares</h3>
+        <p>Executive Creative Director</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/gonzalo.jpg" alt="Gonzalo Fernández" />
+        <h3>Gonzalo Fernández</h3>
+        <p>Executive Creative Director</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/juan.png" alt="Juan Ure" />
+        <h3>Juan Ure</h3>
+        <p>Executive Creative Director</p>
+      </div>
+
+      <div class="member">
+        <img src="assets/images/leadership/pablo.jpg" alt="Pablo Molina" />
+        <h3>Pablo Molina</h3>
+        <p>Head of Production</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block mission-block">
+    <div class="mission-wrapper">
+      
+      <!-- Texto lateral -->
+      <div class="mission-label">
+        <p>Nuestra<br><span class="italic">misión</span></p>
+        <div class="mission-arrow">→</div>
+      </div>
+
+      <!-- Texto principal -->
+      <div class="mission-box">
+        <h2>
+          <span class="black">crear</span><br>
+          <span class="light">famously</span><br>
+          <span class="light">effective</span><br>
+          <span class="black">ideas<span class="dot">.</span></span>
+        </h2>
+      </div>
+
+    </div>
+  </div>
+
+      <!-- Famously effective -->
+  <div class="block impacto-efectividad">
+    <div class="impacto-container">
+
+      <!-- Venn Diagram -->
+      <div class="venn-diagram">
+        <div class="circle left"></div>
+        <div class="circle right"></div>
+        <div class="circle center">
+          <p class="garamond">Famously<br>Effective<br>Ideas</p>
+        </div>
+
+        <!-- Texto encima de los círculos laterales -->
+        <div class="venn-text left">
+          <p><span class="garamond">Not</span> just<br><span class="garamond">famous</span></p>
+        </div>
+        <div class="venn-text right">
+          <p><span class="garamond">Not</span> just<br><span class="garamond">effective</span></p>
+        </div>
+      </div>
+
+      <!-- Text Explanation -->
+      <div class="impacto-text">
+        <div class="arrow">↓</div>
+        <p>
+          No son ideas virales sin impacto en el negocio,<br>
+          ni ideas que cumplan <span class="underline">KPIs</span> y pasen desapercibidas.
+        </p>
+        <p><span class="highlight">Son ideas de<br>IMPACTO + EFECTIVIDAD</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="block campanias">
+    <div class="campanias-container">
+
+      <!-- Texto a la izquierda -->
+      <div class="campanias-text-container">
+        <div class="campanias-text-box">
+          <p class="garamond">Famously Effective Ideas</p>
+          <h2>Reflejan<br>cultura</h2>
+        </div>
+      </div>
+
+
+      <!-- Video a la derecha -->
+      <div class="campanias-video-container">
+        <div class="campanias-brand-title">
+          <span class="marca">Coca-Cola</span> → <strong>Juntos en todas</strong>
+        </div>
+        <div class="campanias-video-wrapper">
+          <iframe src="https://www.youtube.com/embed/aAJfTeNG-Zc?si=ZJyNN7REqywJlUpn" 
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Bloque campañas GRID -->
+  <div class="block campanias-grid">
+    <div class="campanias-grid-container">
+
+      <!-- Bloque 1 -->
+      <div class="campanias-grid-item">
+        <h3 class="campanias-grid-title">Estamos más cerca</h3>
+        <div class="campanias-grid-video-wrapper">
+          <iframe src="https://www.youtube.com/embed/3MIkGAPHj2g?si=5XjYeAWzC3rVbeEV"
+            title="Estamos más cerca"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Bloque 2 -->
+      <div class="campanias-grid-item">
+        <h3 class="campanias-grid-title">Te tocó nacer acá</h3>
+        <div class="campanias-grid-video-wrapper">
+          <iframe src="https://www.youtube.com/embed/avyYgW0XJvA?si=ZJ5QEx9lp2nfa4Vj"
+            title="Alguien al lado"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Bloque 3 -->
+      <div class="campanias-grid-item">
+        <h3 class="campanias-grid-title">Sarli</h3>
+        <div class="campanias-grid-video-wrapper">
+          <iframe src="https://www.youtube.com/embed/bV_qdIs8DsA?si=k1geL3yD5yj80z5e"
+            title="Video 3"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Bloque 4 -->
+      <div class="campanias-grid-item">
+        <h3 class="campanias-grid-title">Christmas always finds its way</h3>
+        <div class="campanias-grid-video-wrapper">
+          <iframe src="https://www.youtube.com/embed/GBk3SIpR1cA?si=A1s0pEpBVgFzLKkb"
+            title="Video 4"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bloque único - Awards -->
+  <div class="block awards-grey">
+    <h2 class="awards-title garamond">Famously Effective Ideas</h2>
+
+    <div class="awards-row">
+      <div class="awards-category">
+        <div class="awards-label">creative<span class="arrow">→</span></div>
+        <div class="awards-item">
+          <img src="assets/images/awards/lion.png" alt="Cannes 1" />
+          <div>
+            <p><strong>#1 Agencia Grey en Cannes</strong><br>2022 y 2023</p>
+          </div>
+        </div>
+        <div class="awards-item">
+          <img src="assets/images/awards/lion.png" alt="Cannes 2" />
+          <div>
+            <p><strong>46 Leones Cannes</strong><br>en 9 años</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="awards-category">
+        <div class="awards-label">effective<span class="arrow">→</span></div>
+        <div class="awards-item">
+          <img src="assets/images/awards/effie.png" alt="Effie 1" />
+          <div>
+            <p><strong>Gran Effie 2022</strong><br>Argentina y <span class="underline">Latam</span></p>
+          </div>
+        </div>
+        <div class="awards-item">
+          <img src="assets/images/awards/effie.png" alt="Effie 2" />
+          <div>
+            <p><strong>Top 20 agencias más efectivas del mundo</strong><br>Últimos 10 años</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img class="awards-stamp" src="assets/images/awards/comprobado.webp" alt="Sello comprobado" />
+  </div>
+
+<div class="block break">
+  <div class="break-inner">
+    <p class="break-text">Estamos obsesionados con los problemas</p>
+    <p class="break-text">¿Cuál es nuestro método?</p>
+  </div>
+</div>
+
+  <!-- Bloque SOLUTION FIRST -->
+  <div class="block solution-first">
+    <div class="solution-content">
+      <div class="solution-top-text">#1:</div>
+      <div class="solution-label">Abordaje</div>
+
+      <div class="solution-main">
+        <span class="solution-bold">solution</span>
+        <span class="solution-outline">first</span>
+      </div>
+
+      <div class="solution-bottom">
+        <span>Problema de Negocio</span>
+        <span>Entendimiento de la tensión cultural</span>
+        <span>Solución Significativa</span>
+        <span class="red">Famously Effective Idea</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Segunda parte del bloque SOLUTION -->
+  <div class="block solution-second">
+    <div class="solution-second-container">
+      <div class="solution-second-label">#2:</div>
+
+      <div class="solution-diagram">
+        <!-- Círculo central con anillos -->
+        <div class="circle-group">
+        <div class="circle-inner"></div>
+          <div class="circle-core">Data</div>
+          <div class="circle-top-left">Cultura</div>
+          <div class="circle-top-right">Tendencias</div>
+          <div class="circle-bottom-left">Comportamiento</div>
+          <div class="circle-bottom-right">Necesidades</div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="tool tool-statista">
+          <img src="assets/images/solution/statista.png" alt="Statista logo" class="logo-statista" />
+          <p>Datos y estadísticas de más de 18.000 fuentes sobre 80.000 temas. Desde rankings hasta proyecciones e informes de mercado.</p>
+        </div>
+
+        <div class="tool tool-warcc">
+          <img src="assets/images/solution/warc.png" alt="WARC logo" class="logo-warcc" />
+          <p>El <span class="underline">World Advertising Research</span> Center contiene las mejores prácticas e inteligencia de marketing. Provee asesoramiento publicitario, ideas publicitarias, inteligencia de medios e <span class="underline">información</span> publicitaria.</p>
+        </div>
+
+        <div class="tool tool-globalweb">
+          <img src="assets/images/solution/global.png" alt="Global Web Index logo" class="logo-globalweb" />
+          <p>Es una herramienta de investigación online que nos permite acceder a datos sobre el comportamiento de las personas de diferentes edades en diferentes países del mundo.</p>
+        </div>
+
+        <div class="tool tool-aytm">
+          <img src="assets/images/solution/atym.png" alt="AYTM logo" class="logo-aytm" />
+          <p>Plataforma de encuestas a un panel online, nos permite detectar <span class="underline">insights</span>, validar hipótesis o explorar necesidades.</p>
+        </div>
+
+        <div class="tool tool-brandwatch">
+          <img src="assets/images/solution/brandwatch.png" alt="Brandwatch logo" class="logo-brandwatch" />
+          <p>Herramienta de escucha social para calificar y cuantificar cómo la gente habla de la marca en redes sociales y ecosistema digital.</p>
+        </div>
+
+        <div class="tool tool-infegy">
+          <img src="assets/images/solution/infegy.png" alt="Infegy logo" class="logo-infegy" />
+          <p>Datos de conversación en plataformas sociales. La utilizamos para complementar o reemplazar <span class="underline">Brandwatch</span> según necesidad.</p>
+        </div>
+
+        <div class="tool tool-powerbi">
+          <img src="assets/images/solution/powerbi.png" alt="PowerBI logo" class="logo-powerbi" />
+          <p>Desarrollo de <span class="underline">dashboards</span> para visualización de información útil y necesaria para CRM.</p>
+        </div>
+
+        <div class="tool tool-wppopen">
+          <img src="assets/images/solution/wppopen.png" alt="WPP Open logo" class="logo-wppopen" />
+          <p>Plataforma de inteligencia artificial Taylor <span class="underline">made</span> para la WPP y sus agencias. Con <span class="underline">buckets</span> de contenido para operaciones estrategia y creatividad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="wppopen-cover">
+    <div class="wppopen-bg-image"></div> <!-- Imagen decorativa -->
+    <div class="wppopen-box"></div> <!-- Capa negra encima de la imagen -->
+
+    <div class="wppopen-content">
+      <div class="wppopen-powered">Powered by</div>
+      <img src="assets/images/solution/wppopen.png" alt="WPP Open Logo" class="wppopen-logo" />
+      <p class="wppopen-description">
+        Diseñado para impulsar a nuestros clientes y equipos, permitiéndoles alcanzar mejores resultados, optimizar sus operaciones y evolucionar sus procesos de trabajo.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>

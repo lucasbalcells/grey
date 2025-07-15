@@ -1,0 +1,1349 @@
+@font-face {
+  font-family: 'FranklinGothic-Book';
+  src: url('../assets/fonts/FranklinGothic-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FranklinGothic-Medium';
+  src: url('../assets/fonts/FranklinGothic-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'franklin-gothic-condensed';
+  src: url('../assets/fonts/franklin-gothic-condensed.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GaramondSwash';
+  src: url('../assets/fonts/GaramondMTSwashCaps.ttf') format('truetype');
+}
+
+/* BLOQUE PAGINA */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'FranklinGothic-Book', sans-serif;
+  background-color: transparent;
+  z-index: 0;
+}
+
+.background-red-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FF2400;
+  z-index: -9999;
+}
+
+/* BLOQUE HEADER */
+.block.header {
+  min-height: 20vh;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.block.header .logo-cliente img {
+  max-height: 30px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 5x;
+}
+
+.block.header .logo-us img {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.block.header .fecha {
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-size: 1.2rem;
+  color: black;
+}
+
+
+/* BLOQUE BILLBOARD */
+.block.billboard {
+  width: 100vw;
+  height: 40vh;
+  background-color: #FF2400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.billboard-wrapper {
+  width: 100%;
+  padding: 0; /* o 0 1vw si querés un mínimo margen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.billboard-text {
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-size: clamp(45px, 26.5vw, 390px); /* ← escala responsiva */
+  color: rgb(255, 147, 147);
+  margin: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* BLOQUE SPLIT GENERAL */
+.block.split {
+  margin: 0 auto; /* ← centra el bloque en el viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10vw;
+  height: 60vh;
+  max-width: 1800px;
+}
+
+/* CONTENEDOR FLEX DE IMAGEN Y TEXTO */
+.split-content {
+  display: flex;
+  gap: 100px;
+  width: 100%;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* IMAGEN */
+
+.split-image-container {
+  height: 300px; /* o el alto que desees */
+  width: 500px;
+  overflow: hidden; /* oculta lo que se salga */
+  border-radius: 20px; /* opcional, para bordes redondeados */
+}
+
+.split-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene proporción, recorta si hace falta */
+  display: block;
+}
+
+
+/* CONTENEDOR DE TEXTO CON LÍNEAS DETRÁS */
+.split-text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LÍNEAS FLOTANTES DETRÁS */
+.floating-lines {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.line {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  position: absolute;
+}
+
+.layer-1 {
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+.layer-2 {
+  top: 20px;
+  left: 20px;
+  right: -20px;
+  bottom: -20px;
+}
+
+/* BOX DE TEXTO PRINCIPAL */
+.text-box {
+  background-color: white;
+  padding: 15px 40px 40px 40px; /* top, right, bottom, left */
+  border-radius: 20px;
+  width: 500px;
+  z-index: 1;
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  height: 300px;
+}
+
+/* DESTACADOS */
+.highlight {
+  color: #FF2400;
+  font-weight: bold;
+}
+
+/* FLECHA */
+.arrow {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* BLOQUE SPLIT INVERTIDO */
+.block.split-inverted {
+  margin: 0 auto; /* ← centra el bloque en el viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10vw;
+  height: 50vh;
+  max-width: 1800px;
+}
+
+/* CONTENEDOR FLEX DE TEXTO E IMAGEN (invertido) */
+.split-content-inverted {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 100px;
+  width: 100%;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* IMAGEN */
+
+.split-image-container-inverted {
+  height: 300px; /* o el alto que desees */
+  width: 500px;
+  overflow: hidden; /* oculta lo que se salga */
+  border-radius: 20px; /* opcional, para bordes redondeados */
+}
+
+.split-image-container-inverted img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene proporción, recorta si hace falta */
+  display: block;
+}
+
+
+/* CONTENEDOR DE TEXTO CON LÍNEAS DETRÁS */
+.split-text-wrapper-inverted {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LÍNEAS FLOTANTES DETRÁS */
+.floating-lines {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.line {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  position: absolute;
+}
+
+.layer-1 {
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+.layer-2 {
+  top: 20px;
+  left: 20px;
+  right: -20px;
+  bottom: -20px;
+}
+
+/* BOX DE TEXTO PRINCIPAL */
+
+/* DESTACADOS */
+.highlight {
+  color: #FF2400;
+  font-weight: bold;
+}
+
+/* FLECHA */
+.arrow {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.split-content-inverted {
+  flex-direction: row-reverse;
+}
+
+.split-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVE PARA SPLIT NORMAL E INVERTIDO */
+@media (max-width: 768px) {
+  .split-content,
+  .split-content-inverted {
+    flex-direction: column !important;
+    gap: 60px;
+  }
+}
+
+/*VALORES*/
+.valores {
+  background-color: #ff1e00;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.valores-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.valores-title {
+  font-size: 2rem;
+  font-family: 'FranklinGothic-Book', sans-serif;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.valores-keywords {
+  font-family: 'FranklinGothic-Medium', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.valor {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.plus {
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.valoracion {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.valoracion-title {
+  font-family: 'GaramondSwash', serif;
+  font-size: 2.2rem;
+  color: red;
+  font-style: italic;
+  margin-bottom: 60px;
+}
+
+.valoracion-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/*SCORE*/
+.valoracion-card {
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 260px;
+  position: relative;
+}
+
+.flecha {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: red;
+}
+
+.label {
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.score {
+  font-size: 4rem;
+  color: red;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'FranklinGothic-Medium', sans-serif;
+}
+
+.valoracion-sub {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/*LEADERSHIP*/
+.leadership {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.leadership-title {
+  font-family: 'GaramondSwash', serif;
+  font-size: 2.5rem;
+  color: red;
+  font-style: italic;
+  margin-bottom: 60px;
+  text-decoration: underline dotted red 2px;
+  text-underline-offset: 6px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.member h3 {
+  font-family: 'FranklinGothic-Medium', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.member p {
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 0.9rem;
+  margin: 5px 0 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+}
+
+
+/* MISION */
+.mission-block {
+  background-color: #ff1e00;
+  padding: 80px 40px;
+}
+
+.mission-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.mission-label {
+  font-family: 'GaramondSwash', serif;
+  font-size: 28px;
+  color: white;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.mission-label .italic {
+  font-style: italic;
+}
+
+.mission-arrow {
+  font-family: sans-serif;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.mission-box {
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 40px 60px;
+}
+
+.mission-box h2 {
+  margin: 0;
+  font-size: 80px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.mission-box .black {
+  font-weight: 900;
+  color: black;
+}
+
+.mission-box .light {
+  font-weight: 900;
+  color: #f1f1f1;
+}
+
+.mission-box .dot {
+  color: black;
+}
+
+/*Famously Effective Ideas*/
+.impacto-efectividad {
+  background: #f7f7f7;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.impacto-container {
+  display: flex;
+  max-width: 1200px;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.venn-diagram {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background: #ff2000;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+.circle.left {
+  left: 30px;
+  background: transparent;
+}
+
+
+.circle.right {
+  right: 30px;
+  background: transparent;
+}
+
+.venn-text {
+  position: absolute;
+  top: 170px; /* movelo más arriba o más abajo si querés */
+  width: 150px;
+  font-family: GaramondSwash, serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.2;
+  z-index: 3;
+}
+
+.venn-text.left {
+  left: 10%;
+  text-align: center;
+}
+
+.venn-text.right {
+  right: 10%;
+  text-align: center;
+}
+
+
+.circle.center {
+  background: white;
+  color: #ff2000;
+  font-family: GaramondSwash, serif;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  z-index: 2; /* asegúrate que sea mayor que los otros */
+  padding: 10px;
+  font-size: 30px;
+  position: relative; /* requerido para que z-index funcione */
+}
+
+
+.impacto-text {
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  max-width: 500px;
+  font-size: 20px;
+}
+
+.impacto-text .arrow {
+  font-size: 40px;
+  color: #ff2000;
+  margin-bottom: 20px;
+}
+
+.impacto-text .highlight {
+  color: #ff2000;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.impacto-text .underline {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .impacto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*CAMPAÑAS*/
+/* BLOQUE CAMPAÑAS */
+.block.campanias {
+  padding: 100px 10vw;
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+
+.campanias-container {
+  display: flex;
+  gap: 80px;
+  max-width: 1400px;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Texto a la izquierda */
+.campanias-text-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.campanias-text-container .garamond {
+  font-family: GaramondSwash, serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.campanias-text-container h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Video a la derecha */
+.campanias-video-container {
+  flex: 1.3;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campanias-brand-title {
+  font-family: "franklin-gothic-condensed"; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff2000;
+}
+
+.campanias-video-wrapper iframe {
+  width: 100%;
+  max-width:1120px;
+  border-radius: 12px;
+}
+
+.campanias-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.campanias-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.campanias-text-box {
+  border: 2px solid #ff2000;
+  border-radius: 20px;
+  padding: 100px 30px;
+  display: inline-block;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .campanias-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .campanias-text-container,
+  .campanias-video-container {
+    text-align: center;
+  }
+
+  .campanias-video-wrapper iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+
+/* BLOQUE CAMPAÑAS GRID */
+.block.campanias-grid {
+  background-color: #f1f1f1;
+  padding: 80px 10vw;
+  display: flex;
+  justify-content: center;
+}
+
+.campanias-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.campanias-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.campanias-grid-title {
+  font-family: "franklin-gothic-condensed";
+  font-size: 1.4rem;
+  color: #ff2000;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Video wrapper para mantener aspecto como el otro bloque */
+.campanias-grid-video-wrapper {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.campanias-grid-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .campanias-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .campanias-grid-video-wrapper {
+    max-width: 100%;
+  }
+}
+
+/* Bloque específico - Awards Grey */
+.block.awards-grey {
+  background-color: #f7f7f7;
+  padding: 100px 5vw;
+  position: relative;
+  text-align: center;
+}
+
+.awards-title {
+  font-size: 6rem;
+  color: #ff2000;
+  margin-bottom: 60px;
+}
+
+.awards-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.awards-category {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.awards-label {
+  font-family: "Franklin Gothic Medium", sans-serif;
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.awards-label .arrow {
+  color: #ff2000;
+  font-size: 2.4rem;
+  margin-left: 10px;
+}
+
+.awards-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.awards-item img {
+  width: 120px;
+  height: auto;
+}
+
+.awards-item p {
+  font-family: "Franklin Gothic Book", sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.awards-item .underline {
+  text-decoration: underline;
+}
+
+.awards-stamp {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .awards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .awards-category {
+    align-items: center;
+  }
+
+  .awards-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .awards-stamp {
+    position: static;
+    margin-top: 40px;
+  }
+}
+
+.block.break {
+  background-color: #ff2000;
+  padding: 200px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.break-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Espacio entre las frases */
+}
+
+.break-text {
+  font-family: GaramondSwash, serif;
+  font-style: italic;
+  font-size: 4rem;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .break-text {
+    font-size: 1.8rem;
+    padding: 0 10px;
+  }
+}
+
+/* Bloque SOLUTION FIRST */
+.block.solution-first {
+  background-color: #f1f1f1;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.solution-content {
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  font-family: GaramondSwash, serif;
+}
+
+.solution-top-text {
+  font-size: 2rem;
+  color: #ff2000;
+  text-align: left;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.solution-label {
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.solution-main {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.solution-bold {
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  font-size: 7rem;
+  color: #ff2000;
+  font-weight: bold;
+}
+
+.solution-outline {
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  font-size: 7rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #ff2000;
+  font-weight: bold;
+}
+
+/* Línea larga tipo flecha */
+.solution-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-style: italic;
+  position: relative;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.solution-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 30px;
+  height: 2px;
+  background-color: #ff2000;
+}
+
+.solution-bottom::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #ff2000;
+  border-right: 2px solid #ff2000;
+  transform: rotate(45deg);
+}
+
+/* Colores */
+.solution-bottom .red {
+  color: #ff2000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .solution-main {
+    flex-direction: column;
+  }
+
+  .solution-bold,
+  .solution-outline {
+    font-size: 4rem;
+  }
+
+  .solution-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+
+  .solution-top-text,
+  .solution-label {
+    text-align: center;
+  }
+}
+
+/* Segunda parte del bloque SOLUTION */
+.block.solution-second {
+  background-color: #f1f1f1;
+  padding: 220px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.solution-second-container {
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  font-family: 'GaramondSwash', serif;
+}
+
+/* Título */
+.solution-second-label {
+  color: #ff2000;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Diagrama */
+.solution-diagram {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grupo circular */
+.circle-group {
+  position: relative;
+  width: 430px;
+  height: 430px;
+  border: 2px solid #ff2000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-inner {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border: 2px solid #ff2000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Círculo central */
+.circle-core {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background-color: #ff2000;
+  border-radius: 50%;
+  color: white;
+  font-family: 'GaramondSwash', serif;
+  font-style: italic;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Círculos secundarios */
+.circle-top-left,
+.circle-top-right,
+.circle-bottom-left,
+.circle-bottom-right {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ff2000;
+  border-radius: 50%;
+  background-color: white;
+  font-family: 'franklin-gothic-condensed', sans-serif;
+  font-style: italic;
+  color: #ff2000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+}
+
+.circle-top-left     { top: 90px;   left: 60px; }
+.circle-top-right    { top: 90px;   right: 60px; }
+.circle-bottom-left  { bottom: 20%; left: 60px; }
+.circle-bottom-right { bottom: 20%; right: 60px; }
+
+/* Herramientas */
+.tool {
+  position: absolute;
+  width: 380px;
+  font-size: 0.9rem;
+  font-family: 'FranklinGothic-Book', sans-serif;
+  color: #111;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Posicionamiento individual */
+.tool-statista     { top: 0%;     left: 50%; transform: translateX(-50%); text-align: left; }
+.tool-warcc        { top: 20%;    left: 0%; }
+.tool-globalweb    { top: 50%;    left: 0%; transform: translateY(-50%); }
+.tool-aytm         { bottom: 10%; left: 5%; }
+.tool-brandwatch   { top: 20%;    right: 0%; }
+.tool-infegy       { top: 50%;    right: 0%; transform: translateY(-50%); }
+.tool-powerbi      { bottom: 10%; right: 5%; }
+.tool-wppopen      { bottom: -20%; left: 50%; transform: translateX(-50%); }
+
+/* Logos individuales */
+.logo-warcc      { height: 30px; }
+.logo-statista   { height: 28px; }
+.logo-brandwatch { height: 50px;}
+.logo-infegy     { height: 50px; }
+.logo-globalweb  { height: 70px; }
+.logo-aytm       { height: 90px; }
+.logo-powerbi    { height: 80px; }
+.logo-wppopen    { height: 32px; }
+
+/* Subrayado */
+.underline {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .solution-diagram {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle-group {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle-core {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+  }
+
+  .circle-top-left,
+  .circle-top-right,
+  .circle-bottom-left,
+  .circle-bottom-right {
+    width: 70px;
+    height: 70px;
+    font-size: 0.75rem;
+  }
+
+  .tool {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    flex-direction: row;
+  }
+
+  .tool img {
+    height: 24px;
+  }
+}
+
+/* WPPOPEN */
+/* Fondo rojo general */
+body {
+  background-color: #c91905;
+  margin: 0;
+  padding: 0;
+}
+
+.wppopen-cover {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Imagen decorativa */
+.wppopen-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/images/wppopen/wppopen-bg.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
+  opacity: 1; /* Ajustá si querés bajarla un poco */
+}
+
+/* Fondo negro encima de la imagen */
+.wppopen-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1); /* negro opaco */
+  z-index: 1;
+}
+
+/* Contenido textual encima de todo */
+.wppopen-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wppopen-powered {
+  font-family: 'FranklinGothic-Book', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.wppopen-logo {
+  max-width: 400px;
+  width: 80%;
+  height: auto;
+  top: 10px;
+  margin-bottom: 10px;
+  z-index: 3;
+  filter: brightness(0) invert(1); /* Esto lo vuelve blanco */
+}
+
+
+.wppopen-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: 'FranklinGothic-Book', sans-serif;
+  max-width: 700px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .wppopen-description {
+    font-size: 1rem;
+  }
+
+  .wppopen-logo {
+    max-width: 280px;
+  }
+
+  .wppopen-powered {
+    font-size: 1rem;
+  }
+}
