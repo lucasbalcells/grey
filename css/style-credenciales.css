@@ -97,7 +97,7 @@ html, body {
 
 .billboard-text {
   font-family: 'franklin-gothic-condensed', sans-serif;
-  font-size: clamp(45px, 26.5vw, 390px); /* ← escala responsiva */
+  font-size: clamp(45px, 16.5vw, 390px); /* ← escala responsiva */
   color: rgb(255, 147, 147);
   margin: 0;
   line-height: 1;
